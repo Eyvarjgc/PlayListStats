@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+
+}
+button{
+    background-color: transparent;
+    border: transparent;
+}
+
+img{
+    width: 100%;
+}
+
+body{
+    background-color: var(--backgroundBlack);
+    /* font-family: 'Dhurjati', sans-serif; */
+    color: white;
+}
+:root{
+    --backgroundWhite: #522b5b;
+    --backgroundBlack: #190019;
+    --tileWhite: #fbe4d8;
+    --navFont: 'Dhurjati', sans-serif;
+    --special: 'Press Start 2P';
+
+
+
+}
+.nav{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .logo{
+        width: 70px;
+    }
+
+    .navItems{
+        display: flex;
+        font-size: 25px; 
+        gap: 1em;
+        align-items: center;
+        
+
+    }
+    .navItems li a{
+        color: var(--tileWhite);
+        font-family: var(--navFont);
+    }
+
+    .features{
+        display: flex;
+        width: 60px;
+        height: min-content;
+    }
+    .features button:hover{
+        cursor: pointer;
+    }
+
+}
+
+.hero{
+    .container{
+        width: 80%;
+        height: 70vh;
+        margin: 2em auto;
+        display: flex;
+        flex-direction: column;
+
+        .textContainer{
+            height: 50%;
+            font-family: var(--special);
+            margin: auto 0;
+            order: 2;
+            padding: 1em;
+
+            .stats{
+                text-shadow: 5px 5px 8px greenyellow;
+            }
+
+        }
+        .textContainer h3{
+            font-size: 15px;
+            margin-top: 2em;
+        }
+
+        .textContainer h2{
+            font-size: 40px;
+            margin-top: 10px;
+            margin-left: 5px;
+
+
+        }
+
+        .textContainer p{
+            font-size: 20px;
+            font-family: var(--navFont);
+            margin-left: 10px;
+            margin-bottom: 1em;
+        }
+        .buttonStats{
+            padding: 1em 4em;
+            border: 1px solid greenyellow;
+            color: greenyellow;
+            font-size: 15px;
+            font-family: var(--special);
+            
+        }
+        .img{
+            order: 1;
+            height: 50%;
+        }
+        .img figure{
+            width: 100%;
+        }
+    }
+
+
+}
+
+.top{
+    margin-top: 5em;
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+
+        .containerItemTitle{
+            font-family: var(--special);
+            color: greenyellow;
+            text-shadow: 3px 6px 9px white;
+        }
+
+        .containerItems{
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+            justify-content: center;
+            align-items: center;
+            margin: 2em auto;
+            font-family: var(--special);
+        }
+        .containerItem{
+            margin: 0 auto;
+            width: 300px;
+            text-align: center;
+        }
+        .containerItem h1{
+            font-size: 20px;
+        }
+        .containerItem figure{
+            width: 70%;
+            margin: 1em auto;
+        }
+        .containerItem figure img{
+            border-radius: 10px;
+        }
+        .containerItem p{
+            font-size: 15px;
+        }
+    }
+
+
+    .buttonStats{
+        padding: 1em 4em;
+        border: 1px solid greenyellow;
+        color: greenyellow;
+        font-size: 15px;
+        font-family: var(--special);
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
+
+
+@media (min-width: 750px) {
+    .hero{
+        .container{
+            width: 80%;
+            height: 70vh;
+            margin: 2em auto;
+            display: flex;
+            flex-direction: column;
+
+    
+            .textContainer{
+                height: 50%;
+                font-family: 'Press Start 2P';
+                margin: auto 0;
+                order: 1;
+                padding: 1em;
+    
+            }
+            .textContainer h3{
+                font-size: 30px;
+                margin-top: 2em;
+            }
+    
+            .textContainer h2{
+                font-size: 60px;
+                margin-top: 10px;
+                margin-left: 5px;
+            }
+            .textContainer p{
+                font-size: 30px;
+                font-family: var(--navFont);
+                margin-left: 10px;
+            }
+    
+            .img{
+                order: 2;
+                height: 50%;
+            }
+            .img figure{
+                width: 70%;
+                margin-left: 20em;
+            }
+        }
+    
+    
+    }
+    .top{
+        margin-top: 7em;
+        .container{
+            .containerItems{
+                margin: 7em 0;
+                display: flex;
+                flex-direction: row;
+            }
+            .buttonStats{
+                margin-bottom: 2em;
+            }
+        }
+    }
+
+
+
+
+
+}
