@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
   <main>
@@ -26,13 +28,13 @@
           <img src="Images/musicaWhite.png" alt="Logo" >
         </figure>
         <li><a href="">Home</a></li>
-        <li><a href="">Songs</a></li>
+        <li><a href="templates/artistPlaylist.html">Artist Playlist</a></li>
         <li><a href="">About</a></li>
       </ul>
 
       <div class="features">
         <button class="darkModeButton"><img src="Images/solWhite.png" alt=""></button>
-        <button class="cartButton"><img src="Images/herramientaWhite.png" alt=""></button>
+        <a href="http://localhost:8000/login"><button class="log">Loggin</button></a>
       </div>
 
     </nav> 
@@ -63,50 +65,31 @@
 
 
     <section class="top">
+
       <div class="container">
+        <h1 class="containerItemTitle">Top 3 recently songs</h1>
+          <div class="containerItems">
 
-      <h1 class="containerItemTitle">Top songs</h1>
-
-        <div class="containerItems">
-
-
-
-        <div class="containerItem">
-          <h1>Song name</h1>
-          <figure>
-            <img src="Images/Joji_-_Smithereens.png" alt="">
-          </figure>
-          <p>Price</p>
-        </div>
-
-        <div class="containerItem">
-          <h1>Song name</h1>
-          <figure>
-            <img src="Images/Joji_-_Smithereens.png" alt="">
-          </figure>
-          <p>Price</p>
-        </div>
-
-        <div class="containerItem">
-          <h1 >Song name</h1>
-          <figure>
-            <img src="Images/Joji_-_Smithereens.png" alt="">
-          </figure>
-          <p>Price</p>
-        </div>
+          </div>
 
 
+          <a href="" class="buttonStats">Stats</a>
       </div>
-
-        <a href="" class="buttonStats">Stats</a>
-      </div>
-
     </section>
+
+    
+
   </main>
   
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-  <script src="js/app.js" ></script>
+
+  <!-- <script type="module">
+    import {accessToken} from './js/saved-token.js'
+    // console.log(accessToken);
+
+  </script> -->
+  <script  src="js/main.js" type="module" ></script>
 </body>
 </html><var>
   

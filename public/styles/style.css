@@ -54,11 +54,17 @@ body{
 
     .features{
         display: flex;
-        width: 60px;
+        width: 30px;
         height: min-content;
     }
     .features button:hover{
         cursor: pointer;
+    }
+    .log{
+        color: var(--tileWhite);
+        font-family: var(--navFont);
+        font-size: 25px; 
+
     }
 
 }
@@ -163,7 +169,12 @@ body{
         .containerItem p{
             font-size: 15px;
         }
+
+
+
     }
+
+
 
 
     .buttonStats{
@@ -232,6 +243,7 @@ body{
                 display: flex;
                 flex-direction: row;
             }
+
             .buttonStats{
                 margin-bottom: 2em;
             }
