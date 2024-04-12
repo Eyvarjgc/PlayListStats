@@ -2,22 +2,6 @@ import {accessToken} from './saved-token.js'
 
 
 
-
-// const accessToken = 'BQBKV8X4gbPmx2Je1bvGa7WIZK1RfyGqhdM5zSL0XSARDwsJiuVYTYNuByJP5bLabXgXcBvesBImFNG8IKh5iucS-o3pHnUiBlsQMxceHdee5zUtTtcXt6VQojaD4y3-7QN1YyuPnWpUXfyGOLSflZvtWYImHi0_u2zOvO0BgrRq4P2jReoO93S5Kt8jqj5d9UTs3X3i4UnW0TUn79Fak98ISeIXZoqN78of9YAdgM0xfsbJ-_ccz_NMmqeNUoFdVCP_4Lx4WSQbLg '
-
-// async function loadAccessToken()
-//   try{
-//     const response = await axios.get('../../utils/saved-token.js')
-
-//     console.log(await response);
-
-
-//   }catch(e){
-//     console.log(e);
-//   }
-// }
-// loadAccessToken()
-
 async function getProfileInfo(accessToken){
   try{
     const response = await axios.get('https://api.spotify.com/v1/me', {
