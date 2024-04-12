@@ -1,4 +1,4 @@
-import saveToken from './utils/save-token.js';
+ import saveToken from './utils/save-token.js';
 
 const PORT = process.env.PORT ?? 8000
 
@@ -11,7 +11,7 @@ import cookieParser from 'cookie-parser';
 
 var client_id = '4d04436e43634f5f826da6ea080859fe'; 
 var client_secret = '3b7bcb5f7559444e95b1d960cff77ff7'; 
-var redirect_uri = 'http://localhost:8000/callback';
+var redirect_uri = 'https://spotify-toolskit-dev-begt.3.us-1.fl0.io/callback';
 
 
 const generateRandomString = (length) => {

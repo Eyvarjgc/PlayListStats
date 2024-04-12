@@ -64,7 +64,7 @@ body{
         color: var(--tileWhite);
         font-family: var(--navFont);
         font-size: 25px; 
-
+        color: red;
     }
 
 }
