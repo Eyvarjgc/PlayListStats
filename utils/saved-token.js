@@ -1,5 +1,0 @@
-const accessToken = ' BQAdxasfi3IDB5isu9A-5VpYWpvpqxByGTnWQHYy9GvVztgiiesS3UWCcnS1ypPsYkvOzV7hA5tFHHQxd3OSRXyErFbhDMN9JabfQ1O-5fBKBK12bzoUb34RHqoRFnbgtkY_ZCsGfPFZ1rlip4v3tMghcCajAtc_J0_hehYd-pB2Cs5DOj8jO7JyZSwHZJbrHWbaE9hrWB1zhSM1ZDMe0fc7KGaeDVfpXKkxM6V1Iuby40tEl4B9Ct5D5uih1hMc_psmmMTeCzOjcQ '  
-
-
-
-export default accessToken

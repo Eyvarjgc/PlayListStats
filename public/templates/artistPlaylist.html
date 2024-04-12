@@ -4,30 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    body{
-      background-color: rgb(62, 61, 61);
-    }
-    .playlistItem{
-      border-radius: 25px;
-      width: 50%;
-      margin: 0 auto;
-      background-color: rgb(98, 98, 98);
-      display: flex;
-      flex-direction: row;
-      margin-top: 1em;
-    }
-    .playlistItem:hover{
-      box-shadow: 3px 2px 6px cyan;
-    }
-    img{
-      width: 200px;
-      border-radius: 5px
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Dhurjati&display=swap" rel="stylesheet">
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/artistPlaylist.css">
+
 </head>
 <body>
-  <form action="" method="GET" class="form">
+  <nav class="nav">
+    <ul class="navItems">
+      <figure class="logo">
+        <img src="../Images/musicaWhite.png" alt="Logo" >
+      </figure>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../templates/artistPlaylist.html">Artist Playlist</a></li>
+      <li><a href="">About</a></li>
+    </ul>
+
+    <div class="features">
+      <a href="http://localhost:8000/login"><button class="log">Loggin</button></a>
+    </div>
+
+  </nav> 
+
+  <h1 class="title">Choose a playlist to add the extracted songs to a new playlist.</h1>
+
+  <!-- <form action="" method="GET" class="form">
     <input type="search" class="playInput" placeholder="playlists name">
     <input type="submit" class="submit">
   </form>
@@ -37,15 +41,26 @@
     <input type="text" placeholder="Playlist Name" class="playlistName">
     <input type="submit">
 
-  </form>
+  </form> -->
 
   <div class="playlists">
 
 
 
   </div>
+  <div class="artist-modal modal-disable">
+
+  <img src="../Images/x.png" alt="" class="close-modal">
+
+    <div class="artist" data-artist="Name">
+      <img src="../Images/Joji_-_Smithereens.png" alt="" class="artist-img">
+      <p class="artist-name">Artist name</p>
+    </div>
 
 
+
+
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="../js/artistPlaylist.js" type="module"></script>

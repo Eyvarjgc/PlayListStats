@@ -9,60 +9,62 @@ const playlists = document.querySelector('.playlists')
 const artistsInput = document.querySelector('.artistsInput')
 const artistForm = document.querySelector('.artistForm')
 const playlistName = document.querySelector('.playlistName')
+const artistModal = document.querySelector('.artist-modal')
+const closeModal = document.querySelector('.close-modal')
 
 
+// form.addEventListener('submit', async (e) => {
+//   e.preventDefault()
+//   if(playInput.value){
+//     const nameInput = playInput.value
+//     playInput.value = ''  
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault()
-  if(playInput.value){
-    const nameInput = playInput.value
-    playInput.value = ''  
+//     const userPlaylists = await getUserPlaylist(accessToken)
 
-    const userPlaylists = await getUserPlaylist(accessToken)
+//     const filteredByPlaylistName = userPlaylists.filter(element=> {
+//       return element.name == nameInput
+//     })
 
-    const filteredByPlaylistName = userPlaylists.filter(element=> {
-      return element.name == nameInput
-    })
-
-    const dataInThePlaylist = await getPlaylistItems(accessToken, filteredByPlaylistName)
+//     const dataInThePlaylist = await getPlaylistItems(accessToken, filteredByPlaylistName)
 
 
-    const getArtistsInPL = dataInThePlaylist.map((element) => {
-      return element.track.artists[0].name
-    })
-    console.log('Some artists in this pl');
-    console.log(getArtistsInPL);
+//     const getArtistsInPL = dataInThePlaylist.map((element) => {
+//       return element.track.artists[0].name
+//     })
+//     console.log('Some artists in this pl');
+//     console.log(getArtistsInPL);
 
-    artistForm.addEventListener('submit', (e) => {
-      e.preventDefault()
-      if(artistsInput.value){
-        const artistsInputValue = artistsInput.value
+//     artistForm.addEventListener('submit', (e) => {
+//       e.preventDefault()
+//       if(artistsInput.value){
+//         const artistsInputValue = artistsInput.value
   
-        const getMusic = dataInThePlaylist.filter(element => {
-          return element.track.artists[0].name == artistsInputValue
-        })
+//         const getMusic = dataInThePlaylist.filter(element => {
+//           return element.track.artists[0].name == artistsInputValue
+//         })
     
-        const tracksUris = getMusic.map(element => {
-          return element.track.uri
-        })
+//         const tracksUris = getMusic.map(element => {
+//           return element.track.uri
+//         })
         
-        console.log(tracksUris);
+//         console.log(tracksUris);
         
   
-        console.log('Artist`s music ');
-        console.log(getMusic);
-        createPlaylist(accessToken, tracksUris, playlistName.value)
-        // addTracksToPlaylist(accessToken, tracksUris, )
-        // playlistID
+//         console.log('Artist`s music ');
+//         console.log(getMusic);
+//         createPlaylist(accessToken, tracksUris, playlistName.value)
+//         // addTracksToPlaylist(accessToken, tracksUris, )
+//         // playlistID
     
 
-      }
+//       }
 
-    })
+//     })
 
 
-  }
-})
+//   }
+// })
+
 
 
 
@@ -133,8 +135,6 @@ async function addTracksToPlaylist(InsertAccessToken, uris, playlistID){
 }
 
 
-
-
 async function updateCoverImgPlaylist(InsertAccessToken, playlistId ){
   try{
   
@@ -156,11 +156,10 @@ async function updateCoverImgPlaylist(InsertAccessToken, playlistId ){
 
 }
 
-
 // Get user playlist and insert in the html
 async function getUserPlaylist(InsertAccessToken){
   try{
-    const response = await axios.get('https://api.spotify.com/v1/me/playlists?limit=10&offset=0', {
+    const response = await axios.get('https://api.spotify.com/v1/me/playlists?limit=20&offset=0', {
       headers:{
         Authorization: 'Bearer ' + InsertAccessToken
       }
@@ -175,14 +174,61 @@ async function insertHtml(InsertAccessToken){
   const data = await getUserPlaylist(InsertAccessToken)
   const htmlItem = data.map(element => {
     return `
-    <div class="playlistItem">
-      <h1>${element.name}</h1>
-      <h3>${element.id}</h3>
-      <img src="${element.images[0].url}" alt="">
-      <div></div>
+    <div class="playlistItem" >
+      <img src="${element.images[0].url}" alt="" class="playlistItem-Img" data-name="${element.name}">
+      <h1 class="playlistItem-name">${element.name}</h1>
+
     </div>`
   }).join('') 
 
   playlists.insertAdjacentHTML('beforeend', htmlItem)
-}insertHtml(accessToken)
 
+
+}
+insertHtml(accessToken).then(() => {
+  const playlistItemImg = document.querySelectorAll('.playlistItem-Img');
+
+  playlistItemImg.forEach(element => {
+    element.addEventListener('click', async(e)=>{
+      artistModal.classList.remove('modal-disable')
+      const nameInput = e.srcElement.dataset.name
+
+      const userPlaylists = await getUserPlaylist(accessToken)
+
+      const filteredByPlaylistName = userPlaylists.filter(element=> {
+        return element.name == nameInput
+      })
+
+      const dataInThePlaylist = await getPlaylistItems(accessToken, filteredByPlaylistName)
+
+      const getArtistsInPL = dataInThePlaylist.map((element) => {
+        return element.track.artists[0].name
+      })
+
+      // console.log(filteredByPlaylistName);
+      // console.log(dataInThePlaylist);
+
+      console.log(getArtistsInPL);
+
+
+
+    })
+  });
+
+  closeModal.addEventListener('click', () => {
+    artistModal.classList.add('modal-disable')
+  })
+});
+
+function htmlModal(){
+  const htmlItem = data.map(element => {
+    return `
+    <div class="playlistItem" >
+      <img src="${element.images[0].url}" alt="" class="playlistItem-Img" data-name="${element.name}">
+      <h1 class="playlistItem-name">${element.name}</h1>
+
+    </div>`
+  }).join('') 
+// REALIZAR EL CODIGO DEL MODAL
+  playlists.insertAdjacentHTML('beforeend', htmlItem)
+}

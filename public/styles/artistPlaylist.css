@@ -1,0 +1,166 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+
+}
+button{
+  background-color: transparent;
+  border: transparent;
+}
+
+img{
+  width: 100%;
+}
+
+body{
+  background-color: var(--backgroundBlack);
+  /* font-family: 'Dhurjati', sans-serif; */
+  color: white;
+}:root{
+  --backgroundWhite: #522b5b;
+  --backgroundBlack: #190019;
+  --tileWhite: #fbe4d8;
+  --navFont: 'Dhurjati', sans-serif;
+  --special: 'Press Start 2P';
+
+
+
+}
+
+.nav{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .logo{
+      width: 70px;
+  }
+
+  .navItems{
+      display: flex;
+      font-size: 25px; 
+      gap: 1em;
+      align-items: center;
+      
+
+  }
+  .navItems li a{
+      color: var(--tileWhite);
+      font-family: var(--navFont);
+  }
+
+  .features{
+      display: flex;
+      width: 30px;
+      height: min-content;
+  }
+  .features button:hover{
+      cursor: pointer;
+  }
+  .log{
+      color: var(--tileWhite);
+      font-family: var(--navFont);
+      font-size: 25px; 
+
+  }
+
+}
+
+.title{
+  width: 80%;
+  margin: 1em auto;
+  font-family: var(--special);
+  color: greenyellow;
+  font-size: 15px;
+}
+
+.playlists{
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(6, auto);
+  gap: 10px;
+
+  .playlistItem{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    margin: 2em auto;
+    font-family: var(--special);
+    width: 150px;
+    font-size: 5px;
+    fle
+
+    .playlistItem-Img{
+      height: 150px ;
+      border-radius: 15px;
+    }
+    .playlistItem-Img:hover{
+      cursor: pointer;
+    }
+    .playlistItem-name{
+      text-align: left;
+    }
+  }
+}
+
+.artist-modal{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 90%;
+  height: 90vh;
+  margin: 0 auto;
+  background-color: rgba(0, 128, 0, 0.767);
+  border-radius: 20px;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  .artist{
+    display: flex;
+    flex-direction: row;
+    width: 130px;
+    height: 40px;
+    border-radius: 15px;
+    align-items: center;
+    transition: all 1s;
+    padding: 5px;
+  }
+  .artist:hover{
+    background-color: #522b5bcf;
+  }
+  .artist-img{
+    width: 40px;
+    border-radius: 50px;
+  }
+  .artist-name{
+    font-size: 15px;
+  }
+}
+.modal-disable{
+  display: none;
+}
+.close-modal{
+  width: 50px;
+  height: 50px;
+}
+@media (min-width: 750px) {
+  .title{
+    width: 70%;
+    text-shadow: 1px 1px 1px white;
+    font-size: 20px;
+  }
+
+
+
+
+}
