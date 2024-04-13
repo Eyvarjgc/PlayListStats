@@ -123,20 +123,34 @@ body{
   border-radius: 20px;
   padding: 1em;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 1em;
+
+  .artist-container{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
   .artist{
     display: flex;
     flex-direction: row;
     width: 130px;
     height: 40px;
-    border-radius: 15px;
+    border-radius: 20px;
     align-items: center;
     transition: all 1s;
     padding: 5px;
+    margin: 0 auto;
+    border: 1px solid black;
+    background-color: white;
   }
   .artist:hover{
     background-color: #522b5bcf;
+    cursor: pointer;
   }
   .artist-img{
     width: 40px;
@@ -144,6 +158,8 @@ body{
   }
   .artist-name{
     font-size: 15px;
+    color: black;
+    font-weight: 800;
   }
 }
 .modal-disable{
