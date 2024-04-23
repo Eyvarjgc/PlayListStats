@@ -14,62 +14,6 @@ const closeModal = document.querySelector('.close-modal')
 const artistContainer = document.querySelector('.artist-container')
 
 
-
-// form.addEventListener('submit', async (e) => {
-//   e.preventDefault()
-//   if(playInput.value){
-//     const nameInput = playInput.value
-//     playInput.value = ''  
-
-//     const userPlaylists = await getUserPlaylist(accessToken)
-
-//     const filteredByPlaylistName = userPlaylists.filter(element=> {
-//       return element.name == nameInput
-//     })
-
-//     const dataInThePlaylist = await getPlaylistItems(accessToken, filteredByPlaylistName)
-
-
-//     const getArtistsInPL = dataInThePlaylist.map((element) => {
-//       return element.track.artists[0].name
-//     })
-//     console.log('Some artists in this pl');
-//     console.log(getArtistsInPL);
-
-//     artistForm.addEventListener('submit', (e) => {
-//       e.preventDefault()
-//       if(artistsInput.value){
-
-
-//         const artistsInputValue = artistsInput.value
-  
-//         const getMusic = dataInThePlaylist.filter(element => {
-//           return element.track.artists[0].name == artistsInputValue
-//         })
-    
-//         const tracksUris = getMusic.map(element => {
-//           return element.track.uri
-//         })
-        
-//         console.log(tracksUris);
-        
-  
-//         console.log('Artist`s music ');
-//         console.log(getMusic);
-//         createPlaylist(accessToken, tracksUris, playlistName.value)
-//         // addTracksToPlaylist(accessToken, tracksUris, )
-//         // playlistID
-    
-
-//       }
-
-//     })
-
-
-//   }
-// })
-
-
 // GET PLAYLIST TRACKS
 async function getPlaylistItems(InsertAccessToken, playlistInfo ){
   try{
@@ -87,7 +31,7 @@ async function getPlaylistItems(InsertAccessToken, playlistInfo ){
   }
 }
 
-
+// CREATE PL
 async function createPlaylist(InsertAccessToken , uris, playlistName){
   try{
     const clientID = ''
@@ -210,7 +154,7 @@ function htmlModal(artist){
 }
 
 
-async function htmlTest(InsertAccessToken){
+async function htmlCode(InsertAccessToken){
   try{
     await insertHtml(InsertAccessToken)
     const playlistItemImg = document.querySelectorAll('.playlistItem-Img');
@@ -246,6 +190,10 @@ async function htmlTest(InsertAccessToken){
             const tracksUris = getMusic.map(element => {
               return element.track.uri
             })
+
+
+
+            createPlaylist(accessToken, tracksUris, artistInput + ' PL')
           })
 
 
@@ -267,6 +215,6 @@ async function htmlTest(InsertAccessToken){
 
 }
 
-htmlTest(accessToken)
+htmlCode(accessToken)
 
 
