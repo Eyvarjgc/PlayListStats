@@ -112,14 +112,12 @@ body{
 
 .artist-modal{
   position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 90%;
   height: 90vh;
-  margin: 0 auto;
-  background-color: rgba(0, 128, 0, 0.767);
+  background-color: #673375a9;
   border-radius: 20px;
   padding: 1em;
   display: flex;
@@ -145,8 +143,8 @@ body{
     transition: all 1s;
     padding: 5px;
     margin: 0 auto;
-    border: 1px solid black;
-    background-color: white;
+    /* border: 1px solid greenyellow; */
+    background-color: black;
   }
   .artist:hover{
     background-color: #522b5bcf;
@@ -158,8 +156,9 @@ body{
   }
   .artist-name{
     font-size: 15px;
-    color: black;
+    color: greenyellow;
     font-weight: 800;
+    margin: 0 auto;
   }
 }
 .modal-disable{
