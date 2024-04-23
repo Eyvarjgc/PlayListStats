@@ -1,7 +1,6 @@
 import {accessToken} from './saved-token.js'
 
 
-
 async function getProfileInfo(accessToken){
   try{
     const response = await axios.get('https://api.spotify.com/v1/me', {
@@ -19,13 +18,11 @@ async function getProfileInfo(accessToken){
 }
 
 
-
-
-async function getTrack(accessToken){
+async function getTrack(accessToken, range){
   try{
     const containerItem = document.querySelector('.containerItems')
-
-    const response = await axios.get('https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=3', {
+    containerItem.textContent = ''
+    const response = await axios.get(`https://api.spotify.com/v1/me/top/tracks?time_range=${range}&limit=3`, {
       headers:{
         Authorization: 'Bearer ' + accessToken
       }
@@ -52,10 +49,17 @@ async function getTrack(accessToken){
 
 
 getProfileInfo(accessToken)
-getTrack(accessToken)
+getTrack(accessToken, 'short_term')
+
+const songsTime = document.querySelector('.selectOptions')
+
+songsTime.addEventListener('change', e => {
+  const value = e.target.value
+  getTrack(accessToken, value)
 
 
 
+})
 
 
 

@@ -27,9 +27,9 @@
         <figure class="logo">
           <img src="Images/musicaWhite.png" alt="Logo" >
         </figure>
-        <li><a href="">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="templates/artistPlaylist.html">Artist Playlist</a></li>
-        <li><a href="">About</a></li>
+        <li><a href="templates/about.html">About</a></li>
       </ul>
 
       <div class="features">
@@ -50,7 +50,7 @@
 
           <p>Know some of your spotify stats here</p>
           
-          <a class="buttonStats">Stats</a>
+          <a href="templates/userStats.html" class="buttonStats">Stats</a>
         </div>
 
         <div class="img">
@@ -67,13 +67,23 @@
     <section class="top">
 
       <div class="container">
-        <h1 class="containerItemTitle">Top 3 recently songs</h1>
+        <div class="container-topSongs">
+        <h1 class="containerItemTitle">Top 3 songs</h1>
+        <select name="" id="" class="selectOptions">
+          <option value="short_term" class="option">Recently</option>
+          <option value="medium_term" class="option">6 months</option>
+          <option value="long_term" class="option">1 year</option>
+
+        </select>
+
+        </div>
+
           <div class="containerItems">
 
           </div>
 
 
-          <a href="" class="buttonStats">Stats</a>
+          <a href="templates/userStats.html" class="buttonStats">Stats</a>
       </div>
     </section>
 

@@ -136,10 +136,27 @@ body{
         width: 90%;
         margin: 0 auto;
 
-        .containerItemTitle{
+        .container-topSongs{
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            .containerItemTitle{
             font-family: var(--special);
             color: greenyellow;
             text-shadow: 3px 6px 9px white;
+        }
+
+        .selectOptions{
+            font-family: var(--special);
+            background-color: transparent;
+            border: transparent 0px solid;
+            font-size: 30px;    
+            color: greenyellow;
+            margin-left: 1em;
+        } 
+        .selectOptions .option{
+            background-color: #190019;
+        }
         }
 
         .containerItems{
