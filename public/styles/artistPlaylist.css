@@ -34,14 +34,16 @@ body{
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  margin-left: 1em;
+  justify-content: space-evenly;
+
   .logo{
       width: 70px;
+      display: none;
   }
-
   .navItems{
       display: flex;
-      font-size: 25px; 
+      font-size: 15px; 
       gap: 1em;
       align-items: center;
       
@@ -51,23 +53,24 @@ body{
       color: var(--tileWhite);
       font-family: var(--navFont);
   }
-
   .features{
       display: flex;
       width: 30px;
       height: min-content;
+      margin-left: 1.5em;
   }
   .features button:hover{
       cursor: pointer;
   }
   .log{
-      color: var(--tileWhite);
+      color: greenyellow;
       font-family: var(--navFont);
-      font-size: 25px; 
+      font-size: 20px; 
 
   }
 
 }
+
 
 .title{
   width: 80%;
@@ -81,7 +84,7 @@ body{
   width: 90%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
   grid-template-rows: repeat(6, auto);
   gap: 10px;
 
@@ -94,8 +97,8 @@ body{
     margin: 2em auto;
     font-family: var(--special);
     width: 150px;
+
     font-size: 5px;
-    fle
 
     .playlistItem-Img{
       height: 150px ;
@@ -175,7 +178,29 @@ body{
     font-size: 20px;
   }
 
+  .nav{
+    justify-content: space-around;
 
+    .logo{
+        width: 70px;
+        display: block;
+    }
+    .navItems{
+        display: flex;
+        font-size: 25px; 
+        gap: 1em;
+        align-items: center;
+        
 
+    }
+}
 
+.playlists{
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(6, auto);
+  gap: 10px;
+}
 }

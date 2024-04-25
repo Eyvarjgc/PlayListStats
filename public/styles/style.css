@@ -34,14 +34,16 @@ body{
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    margin-left: 1em;
+    justify-content: space-evenly;
+
     .logo{
         width: 70px;
+        display: none;
     }
-
     .navItems{
         display: flex;
-        font-size: 25px; 
+        font-size: 15px; 
         gap: 1em;
         align-items: center;
         
@@ -51,19 +53,19 @@ body{
         color: var(--tileWhite);
         font-family: var(--navFont);
     }
-
     .features{
         display: flex;
         width: 30px;
         height: min-content;
+        margin-left: 1.5em;
     }
     .features button:hover{
         cursor: pointer;
     }
     .log{
-        color: var(--tileWhite);
+        color: greenyellow;
         font-family: var(--navFont);
-        font-size: 25px; 
+        font-size: 20px; 
 
     }
 
@@ -72,17 +74,15 @@ body{
 .hero{
     .container{
         width: 80%;
-        height: 70vh;
         margin: 2em auto;
         display: flex;
         flex-direction: column;
-
+        
         .textContainer{
             height: 50%;
             font-family: var(--special);
             margin: auto 0;
             order: 2;
-            padding: 1em;
 
             .stats{
                 text-shadow: 5px 5px 8px greenyellow;
@@ -114,11 +114,9 @@ body{
             color: greenyellow;
             font-size: 15px;
             font-family: var(--special);
-            
         }
         .img{
             order: 1;
-            height: 50%;
         }
         .img figure{
             width: 100%;
@@ -139,11 +137,15 @@ body{
         .container-topSongs{
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             align-items: start;
+            justify-content: center;
             .containerItemTitle{
             font-family: var(--special);
             color: greenyellow;
             text-shadow: 3px 6px 9px white;
+            margin: 0 auto;
+
         }
 
         .selectOptions{
@@ -153,6 +155,7 @@ body{
             font-size: 30px;    
             color: greenyellow;
             margin-left: 1em;
+            margin-top: 1em;
         } 
         .selectOptions .option{
             background-color: #190019;
@@ -207,6 +210,23 @@ body{
 
 
 @media (min-width: 750px) {
+    .nav{
+        justify-content: space-around;
+
+        .logo{
+            width: 70px;
+            display: block;
+        }
+        .navItems{
+            display: flex;
+            font-size: 25px; 
+            gap: 1em;
+            align-items: center;
+            
+    
+        }
+    }
+    
     .hero{
         .container{
             width: 80%;
@@ -253,22 +273,50 @@ body{
     
     }
     .top{
-        margin-top: 7em;
-        .container{
+    margin-top: 7em;
+        
+    .container{
             .containerItems{
                 margin: 7em 0;
                 display: flex;
                 flex-direction: row;
+
+
+                
             }
 
             .buttonStats{
                 margin-bottom: 2em;
             }
+
         }
+
+
     }
 
 
+        .selectOptions{
+            font-family: var(--special);
+            background-color: transparent;
+            border: transparent 0px solid;
+            font-size: 30px;    
+            color: greenyellow;
+            margin-left: 1em;
+            margin-top: 0em !important; 
+        } 
+        .container-topSongs{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap !important;
+            align-items: start;
+            justify-content: start !important;
+            .containerItemTitle{
+            font-family: var(--special);
+            color: greenyellow;
+            text-shadow: 3px 6px 9px white;
+            margin: 0 0 !important;
 
-
+        }
+    }
 
 }
