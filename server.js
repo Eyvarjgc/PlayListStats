@@ -62,6 +62,7 @@ app.get('/callback', function(req, res) {
       }));
   } else {
     res.clearCookie(stateKey);
+
     var authOptions = {
       url: 'https://accounts.spotify.com/api/token',
       form: {
@@ -92,6 +93,7 @@ app.get('/callback', function(req, res) {
         request.get(options, function(error, response, body) {
           console.log(body);
         });
+        res.cookie('token', access_token)
 
         // we can also pass the token to the browser to make requests from there
         res.redirect('/#' +
@@ -109,6 +111,9 @@ app.get('/callback', function(req, res) {
     });
   }
 });
+
+
+
 
 app.get('/refresh_token', function(req, res) {
 
@@ -143,5 +148,4 @@ app.get('/refresh_token', function(req, res) {
 app.listen(PORT, (req,res) => {
   console.log(`App listening in \n http://localhost:${PORT}`);
 });
-
 
