@@ -8,8 +8,11 @@ function getCookie(cName) {
   })
   return res;
 }
-const accessToken = getCookie('token')
+const accessToken = ' '  + getCookie('token')
 
+
+// DEVELOPER
+// import {accessToken} from './saved-token.js'
 
 import {imgFile} from './defaultImageEncoded.js'
 
@@ -108,7 +111,6 @@ async function updateCoverImgPlaylist(InsertAccessToken, playlistId ){
             }
     })
 
-    console.log(response);
 
 
 
@@ -190,19 +192,17 @@ async function htmlCode(InsertAccessToken){
 
         await htmlModal(getArtistsInPL)
         const artist = document.querySelectorAll('.artist');
+        console.log(getArtistsInPL);
 
         artist.forEach(element => {
           element.addEventListener('click', (i) => {
-            const artistInput =  i.srcElement.dataset.artist
-
+            const artistInput =  i.srcElement.innerText
             const getMusic = dataInThePlaylist.filter(element => {
               return element.track.artists[0].name == artistInput
             })
-            
             const tracksUris = getMusic.map(element => {
               return element.track.uri
             })
-
 
 
             createPlaylist(accessToken, tracksUris, artistInput + ' PL')
@@ -228,5 +228,7 @@ async function htmlCode(InsertAccessToken){
 }
 
 htmlCode(accessToken)
+
+
 
 
