@@ -66,11 +66,10 @@ body{
       color: greenyellow;
       font-family: var(--navFont);
       font-size: 20px; 
-
+      display: none;
   }
 
 }
-
 
 .title{
   width: 80%;
@@ -193,8 +192,11 @@ body{
         
 
     }
-}
 
+    .log{
+        display: block;
+    }
+}
 .playlists{
   width: 90%;
   margin: 0 auto;
