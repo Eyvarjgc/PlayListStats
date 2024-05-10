@@ -1,9 +1,5 @@
 {
   "rewrites": [
-    { "source": "/login", "destination": "/callback"}
-    
-  
-  
-  
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
