@@ -1,4 +1,6 @@
 import saveToken from './utils/save-token.js';
+import 'dotenv/config'
+
 
 const PORT = process.env.PORT ?? 8000
 
@@ -8,10 +10,11 @@ import { randomBytes } from 'crypto';
 import cors from 'cors';
 import { stringify } from 'querystring';
 import cookieParser from 'cookie-parser';
+import { env } from 'process';
 
 var client_id = '4d04436e43634f5f826da6ea080859fe'; 
 var client_secret = '3b7bcb5f7559444e95b1d960cff77ff7'; 
-var redirect_uri = 'https://spotify-toolskit.vercel.app/callback' ;
+var redirect_uri = process.env.production ;
 
 
 const generateRandomString = (length) => {
