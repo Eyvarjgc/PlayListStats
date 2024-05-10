@@ -1,3 +1,10 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/callback" }]
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" },
+    { "source": "/login", "destination": "/" }
+    
+  
+  
+  
+  ]
 }
