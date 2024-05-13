@@ -115,9 +115,6 @@ app.get('/callback', function(req, res) {
   }
 });
 
-
-
-
 app.get('/refresh_token', function(req, res) {
 
   var refresh_token = 'AQAISUwYc7WFuRRISanhHjq9hLir7S1V4WjToX1NFeWI89hYZUxie1LQhbKWe6CFLhCgVmo4Ax8lG-PyEutUYB3NwIu104d5c686a7LxvRHl7zeuvo18C5HbUEBvAT9QgCc';
@@ -146,7 +143,11 @@ app.get('/refresh_token', function(req, res) {
   });
 });
 
+app.get('/test', (req,res) => {
+  res.send({success:true, message:'Aproval Test'})
 
+
+})
 
 app.listen(PORT, (req,res) => {
   console.log(`App listening in \n http://localhost:${PORT}`);
