@@ -63,7 +63,7 @@ async function createPlaylist(InsertAccessToken , uris, playlistName){
     }
 })
 
-  updateCoverImgPlaylist(InsertAccessToken, data.data.id)
+  // updateCoverImgPlaylist(InsertAccessToken, data.data.id)
   addTracksToPlaylist(InsertAccessToken, uris, data.data.id)
   
   alert('Playlist created')
@@ -101,25 +101,25 @@ async function addTracksToPlaylist(InsertAccessToken, uris, playlistID){
 
 
 // UPDATE THE IMAGE OF THE PLAYLIST TO ONE DEFAULT IMG 
-async function updateCoverImgPlaylist(InsertAccessToken, playlistId ){
-  try{
+// async function updateCoverImgPlaylist(InsertAccessToken, playlistId ){
+//   try{
   
-    const response = await axios.put(`https://api.spotify.com/v1/playlists/${playlistId}/images`, imgFile
-      , {
-      headers:{
-        'Content-Type': 'image/jpeg',
-        Authorization: 'Bearer' + InsertAccessToken
-            }
-    })
+//     const response = await axios.put(`https://api.spotify.com/v1/playlists/${playlistId}/images`, imgFile
+//       , {
+//       headers:{
+//         'Content-Type': 'image/jpeg',
+//         Authorization: 'Bearer' + InsertAccessToken
+//             }
+//     })
 
 
 
 
-  }catch(e){
-    console.log(e);
-  }
+//   }catch(e){
+//     console.log(e);
+//   }
 
-}
+// }
 
 
 // GET USER PLAYLISTS AND INSERT INTO THE HTML
