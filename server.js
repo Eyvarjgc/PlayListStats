@@ -15,6 +15,8 @@ import { env } from 'process';
 var client_id = '4d04436e43634f5f826da6ea080859fe'; 
 var client_secret = '3b7bcb5f7559444e95b1d960cff77ff7'; 
 var redirect_uri = 'https://spotify-toolskit.onrender.com/callback' ;
+// var redirect_uri = 'http://localhost:8000/callback' ;
+
 
 
 const generateRandomString = (length) => {
@@ -38,7 +40,7 @@ app.get('/login', function(req, res) {
   var state = generateRandomString(16);
   res.cookie(stateKey, state);
   // your application requests authorization
-  var scope = 'user-read-private user-read-email playlist-read-private user-top-read ugc-image-upload  user-library-read playlist-modify-private';
+  var scope = 'user-read-private user-read-email playlist-read-private user-top-read ugc-image-upload  user-library-read playlist-modify-private ';
   res.redirect('https://accounts.spotify.com/authorize?' +
     stringify({
       response_type: 'code',

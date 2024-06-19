@@ -3,9 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="">
   <title>About</title>
+
+  <link rel="stylesheet" href="../styles/about.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dhurjati&display=swap" rel="stylesheet">
+  <link rel="icon" href="Images/spotifyLogo.png" >
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Simple page for an about section</h1>
+  <nav class="nav">
+    <ul class="navItems">
+      <figure class="logo">
+        <img src="../Images/musicaWhite.png" alt="Logo" >
+      </figure>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../templates/artistPlaylist.html">Create artist playlist</a></li>
+      <li><a href="../templates/userStats.html">Stats</a></li>
+
+      <li><a href="../templates/about.html">About</a></li>
+    </ul>
+
+    <div class="features">
+      <a href="https://spotify-toolskit.onrender.com/login"><button class="log">Login</button></a>
+    </div>
+
+  </nav> 
+
+  <main>
+      <h1> About</h1>
+      <h3>What is this?</h3>
+      <p>This page was created with the purpose of extracting all the songs of an artist from any playlist, thus creating an exclusive playlist for the artist.Initially, it was made as a practice project, but I liked the result so much that I decided to style the page and add new functionalities </p>
+
+      <a href="../templates/artistPlaylist.html">Here is the  special feature</a>
+
+      <h3>Features</h3>
+      <p>The special feature mentioned earlier allows you to add songs by an artist by extracting them from any playlist, creating an exclusive playlist for that artist on your profile.</p>
+      <p>Additionally, you can view the top 10 artists and songs you have listened to the most within a time range of 1 month to 1 year (or more).</p>
+
+      <h3>How to Use?</h3>
+      <p>First, you need to: </p>
+      <ul class="list">
+        <li>-log in with your Spotify account. Don't worry, we won't steal your information as we use Spotify's service directly-</li>
+        <li>-After logging in, you can explore options like viewing your statistics or creating a playlist for your favorite artist-</li>
+      </ul>
+
+      
+      <!-- <strong class="explanation">Each feature comes with a brief explanation on how to use it</strong> -->
+        
+      <h3>Who am I?</h3>
+      <p>I am <a href="https://github.com/Eyvarjgc">Eyvarjgc</a> , a guy who loves creating creative and functional web pages and projects.</p>
+      
+      <h3>Why did I build this website?</h3>
+      <p>One day, I woke up with the idea that everyone should be able to extract the songs of an artist from any playlist and create an exclusive playlist for that artist.</p>
+  </main>
+  <footer>
+    <p>Powered by <a href="https://open.spotify.com">Spotify</a> Created by <a href="https://github.com/Eyvarjgc">Eyvarjgc</a></p>
+  </footer>
 </body>
 </html>

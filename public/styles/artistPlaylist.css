@@ -206,3 +206,14 @@ body{
   gap: 10px;
 }
 }
+
+
+footer{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-family: var(--special);
+  padding: 1.5em;
+}

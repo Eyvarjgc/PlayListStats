@@ -33,7 +33,8 @@ const artistContainer = document.querySelector('.artist-container')
 async function getPlaylistItems(InsertAccessToken, playlistInfo ){
   try{
     const playlistID = playlistInfo[0].id
-    const response = await axios.get(`https://api.spotify.com/v1/playlists/${playlistID}/tracks?limit=50&offset=5`, {
+    const response = await axios.get(`https://api.spotify.com/v1/playlists/${playlistID}/tracks?limit=50&offset=0`, {
+      
       headers:{
         Authorization: 'Bearer ' + InsertAccessToken
       }
@@ -65,6 +66,7 @@ async function createPlaylist(InsertAccessToken , uris, playlistName){
   updateCoverImgPlaylist(InsertAccessToken, data.data.id)
   addTracksToPlaylist(InsertAccessToken, uris, data.data.id)
   
+  alert('Playlist created')
   }catch(e){
     console.log(e);
   }
@@ -88,7 +90,6 @@ async function addTracksToPlaylist(InsertAccessToken, uris, playlistID){
       }
     })
 
-    console.log(response);
 
 
 
@@ -170,9 +171,9 @@ function htmlModal(artist){
 
 async function htmlCode(InsertAccessToken){
   try{
+    
     await insertHtml(InsertAccessToken)
     const playlistItemImg = document.querySelectorAll('.playlistItem-Img');
-
     playlistItemImg.forEach(element => {
       element.addEventListener('click', async(e) => {
         artistModal.classList.remove('modal-disable')
@@ -182,17 +183,23 @@ async function htmlCode(InsertAccessToken){
 
         const filteredByPlaylistName = userPlaylists.filter(element=> {
           return element.name == nameInput
+
+          
         })
   
         const dataInThePlaylist = await getPlaylistItems(accessToken, filteredByPlaylistName)
-  
+
         const getArtistsInPL = dataInThePlaylist.map((element) => {
           return element.track.artists[0].name
         })
 
-        await htmlModal(getArtistsInPL)
+        let uniqueArtist = [...new Set(getArtistsInPL)]
+
+
+
+        await htmlModal(uniqueArtist)
         const artist = document.querySelectorAll('.artist');
-        console.log(getArtistsInPL);
+
 
         artist.forEach(element => {
           element.addEventListener('click', (i) => {

@@ -4,9 +4,131 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User stats</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dhurjati&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/spotifyLogo.png" >
+
+    <link rel="stylesheet" href="../styles/stats.css">
 </head>
 <body>
-  <h1>page for spotify users' stats section</h1>
+  <nav class="nav">
+    <ul class="navItems">
+      <figure class="logo">
+        <img src="../Images/musicaWhite.png" alt="Logo" >
+      </figure>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../templates/artistPlaylist.html">Create artist playlist</a></li>
+      <li><a href="../templates/userStats.html">Stats</a></li>
+
+      <li><a href="../templates/about.html">About</a></li>
+      <script src="https://cdn.tailwindcss.com"></script>
+    </ul>
+
+    <div class="features">
+      <a href="https://spotify-toolskit.onrender.com/login"><button class="log">Login</button></a>
+    </div>
+
+  </nav> 
+
+  <section class="main">
+    <div class="info">
+      <div class="userInfo">
+        <img src="" alt="" class="userImg">
+        <h3 class="userName"></h3>
+      </div>
+
+      <ul class="options">
+        <span>¿</span>
+        <button class="optionButtons " value="tracks" >Tracks</button> 
+        <span>or</span>
+        <button class="optionButtons " value="artists"> Artists</button>
+        <span>?</span>
+      </ul>
+
+      <section class="content">
+        <h3 class="showType"></h3>
+
+        
+        <ul class="musicItems">
+          <li class="song">
+            <picture>
+              <img src="../Images/question-mark.svg" alt="" class="songImg">
+            </picture>
+            <div>
+              <h3>????</h3>
+              <p>????</p>
+            </div>
+          </li>
+
+          <li class="song">
+            <picture>
+              <img src="../Images/question-mark.svg" alt="" class="songImg">
+            </picture>
+            <div>
+              <h3>????</h3>
+              <p>????</p>
+            </div>
+          </li>
+          
+          <li class="song">
+            <picture>
+              <img src="../Images/question-mark.svg" alt="" class="songImg">
+            </picture>
+            <div>
+              <h3>????</h3>
+              <p>????</p>
+            </div>
+          </li>
+
+          <li class="song">
+            <picture>
+              <img src="../Images/question-mark.svg" alt="" class="songImg">
+            </picture>
+            <div>
+              <h3>????</h3>
+              <p>????</p>
+            </div>
+          </li>
+        </ul>
+
+
+      </section>
+
+      <h3 class="showRange" ></h3>
+
+      <ul class="time">
+        <button class="timeButtons " value="short_term" >4 weeks</button> 
+        <button class="timeButtons " value="medium_term">6 months</button>
+        <button class="timeButtons " value="long_term">1 year</button>
+      </ul>
+    </div>
+  </section>
+  
+  <!-- <section class="help">
+    <h3>Click me if u need help</h3>
+    <div class="explain">
+      <span>Choose What to View</span>
+      <li>Click on 'Songs': This will display your top 10 most listened-to songs.</li>
+      <li>Click on 'Artists': This will show your top 10 favorite artists.</li>
+
+      <span>Adjust the Time Range</span>
+      <li> At the bottom of the page, you can find options to select the time range for your statistics.</li>
+      <li>Choose from 4 weeks , 6 months, 1 year, or more. Your statistics will be updated according to the selected time period.</li>
+    </section>
+      
+    </div> -->
+    <footer>
+      <p>Powered by <a href="https://open.spotify.com">Spotify</a> Created by <a href="https://github.com/Eyvarjgc">Eyvarjgc</a></p>
+    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script src="../js/userStats.js" type="module"></script>
   
 </body>
 </html>

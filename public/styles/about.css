@@ -1,0 +1,158 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+
+}
+button{
+  background-color: transparent;
+  border: transparent;
+}
+
+img{
+  width: 100%;
+}
+
+body{
+  background-color: var(--backgroundBlack);
+  /* font-family: 'Dhurjati', sans-serif; */
+  color: white;
+}
+:root{
+  --backgroundWhite: #522b5b;
+  --backgroundBlack: #190019;
+  --tileWhite: #fbe4d8;
+  --navFont: 'Dhurjati', sans-serif;
+  --special: 'Press Start 2P';
+
+
+
+}
+
+.nav{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+  justify-content: space-evenly;
+
+  .logo{
+      width: 70px;
+      display: none;
+  }
+  .navItems{
+      display: flex;
+      font-size: 15px; 
+      gap: 1em;
+      align-items: center;
+      
+
+  }
+  .navItems li a{
+      color: var(--tileWhite);
+      font-family: var(--navFont);
+  }
+  .features{
+      display: flex;
+      width: 30px;
+      height: min-content;
+      margin-left: 1.5em;
+  }
+  .features button:hover{
+      cursor: pointer;
+  }
+  .log{
+      color: greenyellow;
+      font-family: var(--navFont);
+      font-size: 20px; 
+      display: none;
+  }
+
+}
+
+main{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 60%;
+  margin: 0 auto;
+  text-align: left;
+  h1{
+    font-family: var(--navFont) ;
+    font-size: 45px;
+    margin-top: 0.5em;
+  }
+  h3{
+    font-size: 30px;
+    margin: 1em 0;
+    font-family: var(--navFont);
+  }
+  p{
+    font-size: 20px;
+    justify-content: center;
+    margin-bottom: 1em;
+  }
+  a{
+    text-decoration: underline greenyellow;
+    color: white;
+    font-size: 20px;
+  }
+
+  .list{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto  ;
+    background-color: rgba(0, 0, 0, 0.45);
+    border-radius: 10px;
+    font-size: 18px;
+    li{
+      margin: 1em;
+    }
+  }
+  .explanation{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 20px;
+    margin: 1em auto;
+    color: greenyellow;
+  }
+}
+
+
+
+@media (min-width: 750px) {
+  .nav{
+      justify-content: space-around;
+
+      .logo{
+          width: 70px;
+          display: block;
+      }
+      .navItems{
+          display: flex;
+          font-size: 25px; 
+          gap: 1em;
+          align-items: center;
+          
+
+      }
+
+      .log{
+          display: block;
+      }
+  }
+}
+
+
+footer{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-family: var(--special);
+  padding: 1.5em;
+}

@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/artistPlaylist.css">
+  <link rel="icon" href="Images/spotifyLogo.png" >
 
 </head>
 <body>
@@ -20,7 +21,7 @@
       </figure>
       <li><a href="../index.html">Home</a></li>
       <li><a href="../templates/artistPlaylist.html">Create artist playlist</a></li>
-      <li><a href="../templates/artistPlaylist.html">Stats</a></li>
+      <li><a href="../templates/userStats.html">Stats</a></li>
 
       <li><a href="../templates/about.html">About</a></li>
     </ul>
@@ -32,6 +33,7 @@
   </nav> 
 
   <h1 class="title">Choose a playlist to add the extracted songs to a new playlist.</h1>
+  <h3 class="title" style="color: white !important;">For now, only the first 50 artists of each playlist will be added, along with the songs within that range.</h3>
 
   <!-- <form action="" method="GET" class="form">
     <input type="search" class="playInput" placeholder="playlists name">
@@ -59,6 +61,10 @@
 
     </div>
 
+    </div>
+    <footer>
+      <p>Powered by <a href="https://open.spotify.com">Spotify</a> Created by <a href="https://github.com/Eyvarjgc">Eyvarjgc</a></p>
+    </footer>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="../js/artistPlaylist.js" type="module"></script>
 </body>

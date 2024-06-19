@@ -1,0 +1,331 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+
+}
+button{
+  background-color: transparent;
+  border: transparent;
+}
+
+img{
+  width: 100%;
+}
+
+body{
+  background-color: var(--backgroundBlack);
+  /* font-family: 'Dhurjati', sans-serif; */
+  color: white;
+}
+:root{
+  --backgroundWhite: #522b5b;
+  --backgroundBlack: #190019;
+  --tileWhite: #fbe4d8;
+  --navFont: 'Dhurjati', sans-serif;
+  --special: 'Press Start 2P';
+
+
+
+}
+.nav{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+  justify-content: space-evenly;
+
+  .logo{
+      width: 70px;
+      display: none;
+  }
+  .navItems{
+      display: flex;
+      font-size: 15px; 
+      gap: 1em;
+      align-items: center;
+      
+
+  }
+  .navItems li a{
+      color: var(--tileWhite);
+      font-family: var(--navFont);
+  }
+  .features{
+      display: flex;
+      width: 30px;
+      height: min-content;
+      margin-left: 1.5em;
+  }
+  .features button:hover{
+      cursor: pointer;
+  }
+  .log{
+      color: greenyellow;
+      font-family: var(--navFont);
+      font-size: 20px; 
+      display: none;
+  }
+
+}
+.main{
+  padding-top: 2em;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center  ;
+  .info{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .userInfo{
+    margin: 0 auto;
+
+    img{
+      width: 125px;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    .userName{
+      margin-top: 1em;
+      font-family: var(--special);
+      font-size: 13px;
+      margin: 0 auto  ;
+    }
+  }
+
+  .options{
+    width: fit-content;
+    font-family: var(--special);
+    font-size: 12px;
+    gap: 1em;
+    margin: 2em auto;
+    flex-wrap: wrap ;
+    
+    .optionButtons{
+      
+      transition: all 0.5s;
+      
+
+    }
+    .optionButtons:hover{
+      color: greenyellow;
+    }
+  }
+  .content{
+    width: 95%;
+    margin: 0 auto;
+    
+    h3{
+    font-family: var(--special);
+    font-size: 10px;
+    
+    }
+    p{
+      font-family: var(--special);
+      font-size: 8px;
+    }
+    .musicItems{
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+      grid-template-rows: repeat(6, auto);
+      gap: 10px;
+    }
+
+    .song{
+      width: 80px ;
+      margin: 2em auto;
+
+      .songImg{
+        border-radius: 15px;
+      }
+    }
+  }
+
+  .time{
+    display: flex;
+    font-family: var(--special);
+    gap: 1em;
+    font-size: 12px;
+    margin: 2em auto;
+    flex-wrap: wrap ;
+    width: fit-content;
+
+    .timeButtons{
+      
+      transition: all 0.5s;
+      
+
+    }
+    .timeButtons:hover{
+      color: greenyellow;
+    }
+  }
+}
+.showRange{
+  color: greenyellow !important;
+  font-size: 20px !important; 
+}
+
+
+
+@media (min-width: 750px) {
+  .nav{
+      justify-content: space-around;
+
+      .logo{
+          width: 70px;
+          display: block;
+      }
+      .navItems{
+          display: flex;
+          font-size: 25px; 
+          gap: 1em;
+          align-items: center;
+          
+
+      }
+
+      .log{
+          display: block;
+      }
+  }
+
+  .main{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .info{
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .userInfo{
+      margin: 0 auto;
+      img{
+        width: 100px;
+        border-radius: 50%;
+      }
+    }
+
+    .content{
+      width: 95%;
+      margin: 0 auto;
+      
+      h3{
+      font-family: var(--special);
+      font-size: 10px;
+      
+      }
+      p{
+        font-family: var(--special);
+        font-size: 8px;
+      }
+      .musicItems{
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+        grid-template-rows: repeat(6, auto);
+        gap: 2px;
+      }
+  
+      .song{
+        width: 150px ;
+        margin: 2em auto;
+  
+        .songImg{
+          border-radius: 15px;
+        }
+      }
+    }
+
+    .time{
+      display: flex;
+      font-family: var(--special);
+      gap: 1em;
+      font-size: 18px;
+      margin: 0 auto;
+      flex-wrap: wrap ;
+      width: fit-content;
+      padding-bottom: 4em;
+  
+      .timeButtons{
+        
+        transition: all 0.5s;
+        
+  
+      }
+      .timeButtons:hover{
+        color: greenyellow;
+      }
+    }
+
+    .options{
+      width: fit-content;
+      font-family: var(--special);
+      font-size: 15px;
+      gap: 1em;
+      margin: 2em auto;
+      flex-wrap: wrap ;
+      
+      .optionButtons{
+        
+        transition: all 0.5s;
+        
+  
+      }
+      .optionButtons:hover{
+        color: greenyellow;
+      }
+    }
+
+
+
+  }
+}
+.showRange{
+  color: greenyellow !important;
+  font-size: 20px !important; 
+  font-family: var(--special);
+  margin: 2em;
+}
+.showType{
+  color: greenyellow;
+  font-size: 20px !important; 
+  font-family: var(--special);
+
+}
+
+.help{
+  font-family: var(--special);
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+.explain{
+  margin-top: 1em;
+  font-family: 'Courier New', Courier, monospace !important;
+}
+
+footer{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-family: var(--special);
+  padding: 1.5em;
+}
