@@ -16,16 +16,15 @@ img{
 
 body{
     background-color: var(--backgroundBlack);
-    /* font-family: 'Dhurjati', sans-serif; */
     color: white;
 }
 :root{
     --backgroundWhite: #522b5b;
     --backgroundBlack: #190019;
     --tileWhite: #fbe4d8;
-    --navFont: 'Dhurjati', sans-serif;
-    --special: 'Press Start 2P';
-
+    --navFont: helvetica neue;
+    --text: sans-serif;
+    --special: arial;
 
 
 }
@@ -36,18 +35,17 @@ body{
     align-items: center;
     margin-left: 1em;
     justify-content: space-evenly;
-
     .logo{
-        width: 70px;
-        display: none;
+        width: 50px;
+        display: block;
     }
     .navItems{
         display: flex;
-        font-size: 15px; 
+        font-size: 15px !important;
         gap: 1em;
         align-items: center;
-        
-
+        justify-content: center;
+      margin: 1em auto;
     }
     .navItems li a{
         color: var(--tileWhite);
@@ -68,9 +66,9 @@ body{
         font-size: 20px; 
         display: none;
     }
-
-}
-
+  
+  }
+  
 .hero{
     .container{
         width: 80%;
@@ -80,10 +78,9 @@ body{
         
         .textContainer{
             height: 50%;
-            font-family: var(--special);
             margin: auto 0;
             order: 2;
-
+            font-family: var(--text);
             .stats{
                 text-shadow: 5px 5px 8px greenyellow;
             }
@@ -104,7 +101,6 @@ body{
 
         .textContainer p{
             font-size: 20px;
-            font-family: var(--navFont);
             margin-left: 10px;
             margin-bottom: 1em;
         }
@@ -113,7 +109,6 @@ body{
             border: 1px solid greenyellow;
             color: greenyellow;
             font-size: 12px;
-            font-family: var(--special);
             transition: all 1s;
         }
         .buttonStats:hover{
@@ -137,8 +132,8 @@ body{
     .container{
         display: flex;
         flex-direction: column;
-        width: 90%;
-        margin: 0 auto;
+        width: 80%;
+        margin: 0 auto; 
 
         .container-topSongs{
             display: flex;
@@ -146,16 +141,18 @@ body{
             flex-wrap: wrap;
             align-items: start;
             justify-content: center;
+            
+
+
             .containerItemTitle{
-            font-family: var(--special);
             color: greenyellow;
-            text-shadow: 3px 6px 9px white;
+            text-shadow: 3px 3px 3px rgb(0, 0, 0);
             margin: 0 auto;
+            font-size: 40px;
 
         }
 
         .selectOptions{
-            font-family: var(--special);
             background-color: transparent;
             border: transparent 0px solid;
             font-size: 30px;    
@@ -175,7 +172,6 @@ body{
             justify-content: center;
             align-items: center;
             margin: 2em auto;
-            font-family: var(--special);
         }
         .containerItem{
             margin: 0 auto;
@@ -189,9 +185,7 @@ body{
             width: 70%;
             margin: 1em auto;
         }
-        .containerItem figure img{
-            border-radius: 10px;
-        }
+
         .containerItem p{
             font-size: 15px;
         }
@@ -208,7 +202,6 @@ body{
         border: 1px solid greenyellow;
         color: greenyellow;
         font-size: 15px;
-        font-family: var(--special);
         width: fit-content;
         margin: 0 auto;
         transition: all 1s;
@@ -220,24 +213,46 @@ body{
     }
 }
 
+.spotifyButtons{
+    margin: 2em  auto;
+    width: 150px;
+    background-color: #1db954;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+    gap: 0.5em;
+    img{
+        width: 35px;
+    }
+    p{
+        font-weight: 700;
+        font-size: 13px;
+        color: black;
+        font-family: arial;
+    }
+}
+
 
 @media (min-width: 750px) {
     .nav{
         justify-content: space-around;
-
+    
         .logo{
             width: 70px;
             display: block;
         }
         .navItems{
             display: flex;
-            font-size: 25px; 
+            font-size: 25px !important; 
             gap: 1em;
             align-items: center;
-            
-
+            margin: 0 !important;
+    
         }
-
+    
         .log{
             display: block;
         }
@@ -254,11 +269,11 @@ body{
     
             .textContainer{
                 height: 50%;
-                font-family: 'Press Start 2P';
                 margin: auto 0;
                 order: 1;
                 padding: 1em;
-
+                font-family: var(--text);
+                
                 .buttonStats{
                     font-size: 20px;
                 }
@@ -276,7 +291,6 @@ body{
             }
             .textContainer p{
                 font-size: 30px;
-                font-family: var(--navFont);
                 margin-left: 10px;
             }
     
@@ -285,8 +299,8 @@ body{
                 height: 50%;
             }
             .img figure{
-                width: 70%;
-                margin-left: 20em;
+                width: 50%;
+                margin-left: 30em;
             }
         }
     
@@ -300,7 +314,6 @@ body{
                 margin: 7em 0;
                 display: flex;
                 flex-direction: row;
-
 
                 
             }
@@ -316,7 +329,6 @@ body{
 
 
         .selectOptions{
-            font-family: var(--special);
             background-color: transparent;
             border: transparent 0px solid;
             font-size: 30px;    
@@ -331,11 +343,10 @@ body{
             align-items: start;
             justify-content: start !important;
             .containerItemTitle{
-            font-family: var(--special);
             color: greenyellow;
-            text-shadow: 3px 6px 9px white;
+            text-shadow: 3px 3px 3px rgb(0, 0, 0);
             margin: 0 0 !important;
-
+            font-family: var(--special);
         }
     }
     .buttonStats{
@@ -355,6 +366,5 @@ footer{
     text-align: center;
     display: flex;
     justify-content: center;
-    font-family: var(--special);
     padding: 1.5em;
 }

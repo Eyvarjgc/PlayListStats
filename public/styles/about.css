@@ -23,8 +23,10 @@ body{
   --backgroundWhite: #522b5b;
   --backgroundBlack: #190019;
   --tileWhite: #fbe4d8;
-  --navFont: 'Dhurjati', sans-serif;
-  --special: 'Press Start 2P';
+  --navFont: helvetica neue;
+  --text: sans-serif;
+  --special: arial;
+
 
 
 
@@ -37,18 +39,17 @@ body{
   align-items: center;
   margin-left: 1em;
   justify-content: space-evenly;
-
   .logo{
-      width: 70px;
-      display: none;
+      width: 50px;
+      display: block;
   }
   .navItems{
       display: flex;
-      font-size: 15px; 
+      font-size: 15px !important;
       gap: 1em;
       align-items: center;
-      
-
+      justify-content: center;
+    margin: 1em auto;
   }
   .navItems li a{
       color: var(--tileWhite);
@@ -125,25 +126,25 @@ main{
 
 @media (min-width: 750px) {
   .nav{
-      justify-content: space-around;
+    justify-content: space-around;
 
-      .logo{
-          width: 70px;
-          display: block;
-      }
-      .navItems{
-          display: flex;
-          font-size: 25px; 
-          gap: 1em;
-          align-items: center;
-          
+    .logo{
+        width: 70px;
+        display: block;
+    }
+    .navItems{
+        display: flex;
+        font-size: 25px !important; 
+        gap: 1em;
+        align-items: center;
+        margin: 0 !important;
 
-      }
+    }
 
-      .log{
-          display: block;
-      }
-  }
+    .log{
+        display: block;
+    }
+}
 }
 
 

@@ -23,8 +23,9 @@ body{
   --backgroundWhite: #522b5b;
   --backgroundBlack: #190019;
   --tileWhite: #fbe4d8;
-  --navFont: 'Dhurjati', sans-serif;
-  --special: 'Press Start 2P';
+  --navFont: helvetica neue;
+  --text: sans-serif;
+  --special: arial;
 
 
 
@@ -36,18 +37,17 @@ body{
   align-items: center;
   margin-left: 1em;
   justify-content: space-evenly;
-
   .logo{
-      width: 70px;
-      display: none;
+      width: 50px;
+      display: block;
   }
   .navItems{
       display: flex;
-      font-size: 15px; 
+      font-size: 15px !important;
       gap: 1em;
       align-items: center;
-      
-
+      justify-content: center;
+    margin: 1em auto;
   }
   .navItems li a{
       color: var(--tileWhite);
@@ -95,7 +95,7 @@ body{
     .userName{
       margin-top: 1em;
       font-family: var(--special);
-      font-size: 13px;
+      font-size: 30px;
       margin: 0 auto  ;
     }
   }
@@ -103,7 +103,7 @@ body{
   .options{
     width: fit-content;
     font-family: var(--special);
-    font-size: 12px;
+    font-size: 20px;
     gap: 1em;
     margin: 2em auto;
     flex-wrap: wrap ;
@@ -129,7 +129,7 @@ body{
     }
     p{
       font-family: var(--special);
-      font-size: 8px;
+      font-size: 10px;
     }
     .musicItems{
       width: 100%;
@@ -144,9 +144,7 @@ body{
       width: 80px ;
       margin: 2em auto;
 
-      .songImg{
-        border-radius: 15px;
-      }
+
     }
   }
 
@@ -154,7 +152,7 @@ body{
     display: flex;
     font-family: var(--special);
     gap: 1em;
-    font-size: 12px;
+    font-size: 20px;
     margin: 2em auto;
     flex-wrap: wrap ;
     width: fit-content;
@@ -175,29 +173,49 @@ body{
   font-size: 20px !important; 
 }
 
-
+.spotifyButtons{
+  margin: 2em  auto;
+  width: 150px;
+  background-color: #1db954;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  gap: 0.5em;
+  img{
+      width: 35px;
+  }
+  p{
+      font-weight: 700;
+      font-size: 13px;
+      color: black;
+      font-family: arial;
+  }
+}
 
 @media (min-width: 750px) {
   .nav{
-      justify-content: space-around;
+    justify-content: space-around;
 
-      .logo{
-          width: 70px;
-          display: block;
-      }
-      .navItems{
-          display: flex;
-          font-size: 25px; 
-          gap: 1em;
-          align-items: center;
-          
+    .logo{
+        width: 70px;
+        display: block;
+    }
+    .navItems{
+        display: flex;
+        font-size: 25px !important; 
+        gap: 1em;
+        align-items: center;
+        margin: 0 !important;
 
-      }
+    }
 
-      .log{
-          display: block;
-      }
-  }
+    .log{
+        display: block;
+    }
+}
 
   .main{
     width: 90%;
@@ -226,12 +244,12 @@ body{
       
       h3{
       font-family: var(--special);
-      font-size: 10px;
+      font-size: 15px;
       
       }
       p{
         font-family: var(--special);
-        font-size: 8px;
+        font-size: 10px;
       }
       .musicItems{
         width: 100%;
@@ -246,9 +264,7 @@ body{
         width: 150px ;
         margin: 2em auto;
   
-        .songImg{
-          border-radius: 15px;
-        }
+
       }
     }
 
@@ -256,7 +272,7 @@ body{
       display: flex;
       font-family: var(--special);
       gap: 1em;
-      font-size: 18px;
+      font-size: 25px;
       margin: 0 auto;
       flex-wrap: wrap ;
       width: fit-content;
@@ -276,7 +292,7 @@ body{
     .options{
       width: fit-content;
       font-family: var(--special);
-      font-size: 15px;
+      font-size: 30px;
       gap: 1em;
       margin: 2em auto;
       flex-wrap: wrap ;

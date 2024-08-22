@@ -22,8 +22,9 @@ body{
   --backgroundWhite: #522b5b;
   --backgroundBlack: #190019;
   --tileWhite: #fbe4d8;
-  --navFont: 'Dhurjati', sans-serif;
-  --special: 'Press Start 2P';
+  --navFont: helvetica neue;
+  --text: sans-serif;
+  --special: arial;
 
 
 
@@ -36,18 +37,17 @@ body{
   align-items: center;
   margin-left: 1em;
   justify-content: space-evenly;
-
   .logo{
-      width: 70px;
-      display: none;
+      width: 50px;
+      display: block;
   }
   .navItems{
       display: flex;
-      font-size: 15px; 
+      font-size: 15px !important;
       gap: 1em;
       align-items: center;
-      
-
+      justify-content: center;
+    margin: 1em auto;
   }
   .navItems li a{
       color: var(--tileWhite);
@@ -74,9 +74,11 @@ body{
 .title{
   width: 80%;
   margin: 1em auto;
-  font-family: var(--special);
+  font-family: var(--text);
   color: greenyellow;
   font-size: 15px;
+  text-align: center;
+
 }
 
 .playlists{
@@ -97,11 +99,10 @@ body{
     font-family: var(--special);
     width: 150px;
 
-    font-size: 5px;
+    font-size: 8px;
 
     .playlistItem-Img{
       height: 150px ;
-      border-radius: 15px;
     }
     .playlistItem-Img:hover{
       cursor: pointer;
@@ -170,11 +171,36 @@ body{
   width: 50px;
   height: 50px;
 }
+
+.spotifyButtons{
+  margin: 2em  auto;
+  width: 150px;
+  background-color: #1db954;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  gap: 0.5em;
+  img{
+      width: 35px;
+  }
+  p{
+      font-weight: 700;
+      font-size: 13px;
+      color: black;
+      font-family: arial;
+  }
+}
+
+
 @media (min-width: 750px) {
   .title{
     width: 70%;
-    text-shadow: 1px 1px 1px white;
     font-size: 20px;
+    font-family: var(--text);
+    margin: 1em auto;
   }
 
   .nav{
@@ -186,10 +212,10 @@ body{
     }
     .navItems{
         display: flex;
-        font-size: 25px; 
+        font-size: 25px !important; 
         gap: 1em;
         align-items: center;
-        
+        margin: 0 !important;
 
     }
 
@@ -203,7 +229,9 @@ body{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: repeat(6, auto);
-  gap: 10px;
+  gap: 20px;
+
+
 }
 }
 
@@ -217,3 +245,4 @@ footer{
   font-family: var(--special);
   padding: 1.5em;
 }
+

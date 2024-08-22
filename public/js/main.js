@@ -45,12 +45,16 @@ async function getTrack(accessToken, range){
     const items = response.data.items
 
     const itemsMap = items.map(Element => {
+      const trackName = Element.name
+      
       return  `        
       <div class="containerItem">
-        <h1>${Element.name}</h1>
-        <figure>
+        <img src="Images/Spotify_Icon_RGB_Green.png" alt="Spotify icon" style="width: 25px;">
+        <figure>  
           <img src="${Element.album.images[0].url}" alt="">
         </figure>
+        <h1>${Element.name}</h1>
+
       </div>`
     }).join('')
     containerItem.insertAdjacentHTML('beforeend', itemsMap)

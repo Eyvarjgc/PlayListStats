@@ -51,6 +51,8 @@ async function getTracks(accessToken,range){
     const itemsMap = items.map(Element => {
       return  `        
       <li class="song">
+        <img src="../Images/Spotify_Icon_RGB_Green.png" alt="Spotify icon" style="width: 20px;" >
+
         <picture>
               <img src="${Element.album.images[0].url}" alt="" class="songImg">
         </picture>
@@ -97,6 +99,8 @@ async function getArtist(accessToken,range){
     const itemsMap = items.map(Element => {
       return  `        
       <li class="song">
+        <img src="../Images/Spotify_Icon_RGB_Green.png" alt="Spotify icon" style="width: 20px;" >
+
         <picture>
               <img src="${Element.images[0].url}" alt="artistImg" class="songImg">
         </picture>

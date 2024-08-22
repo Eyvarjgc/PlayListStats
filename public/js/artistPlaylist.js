@@ -141,6 +141,8 @@ async function insertHtml(InsertAccessToken){
   const htmlItem = data.map(element => {
     return `
     <div class="playlistItem" >
+    
+    <img src="../Images/Spotify_Icon_RGB_Green.png" alt="Spotify icon" style="width: 20px;" >
       <img src="${element.images[0].url}" alt="" class="playlistItem-Img" data-name="${element.name}">
       <h1 class="playlistItem-name">${element.name}</h1>
 
