@@ -25,7 +25,7 @@ async function getProfileInfo(accessToken){
     })
     const name = response.data.display_name
   
-    console.log(response.data);
+    // console.log(response.data);
     return name
   }catch(err){
     console.error(err);
