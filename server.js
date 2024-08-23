@@ -14,7 +14,7 @@ import { env } from 'process';
 
 var client_id = '4d04436e43634f5f826da6ea080859fe'; 
 var client_secret = '3b7bcb5f7559444e95b1d960cff77ff7'; 
-var redirect_uri = 'https://spotify-toolskit.onrender.com/callback' ;
+var redirect_uri = 'https://playliststats.onrender.com/callback' ;
 // var redirect_uri = 'http://localhost:8000/callback' ;
 
 
