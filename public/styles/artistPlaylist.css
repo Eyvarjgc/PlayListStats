@@ -22,9 +22,9 @@ body{
   --backgroundWhite: #522b5b;
   --backgroundBlack: #190019;
   --tileWhite: #fbe4d8;
-  --navFont: helvetica neue;
+  --navFont: 'Dhurjati', sans-serif;
   --text: sans-serif;
-  --special: arial;
+  --special: 'Press Start 2P';
 
 
 
@@ -108,7 +108,8 @@ body{
       cursor: pointer;
     }
     .playlistItem-name{
-      text-align: left;
+      text-align: center;
+      font-size: 10px;
     }
   }
 }

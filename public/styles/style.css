@@ -22,9 +22,9 @@ body{
     --backgroundWhite: #522b5b;
     --backgroundBlack: #190019;
     --tileWhite: #fbe4d8;
-    --navFont: helvetica neue;
+    --navFont: 'Dhurjati' sant-serif;
     --text: sans-serif;
-    --special: arial;
+    --special: 'Press Start 2P';
 
 
 }
@@ -272,7 +272,7 @@ body{
                 margin: auto 0;
                 order: 1;
                 padding: 1em;
-                font-family: var(--text);
+                font-family: var(--special);
                 
                 .buttonStats{
                     font-size: 20px;
@@ -292,6 +292,7 @@ body{
             .textContainer p{
                 font-size: 30px;
                 margin-left: 10px;
+                font-family: var(--navFont);
             }
     
             .img{

@@ -16,7 +16,7 @@ img{
 
 body{
   background-color: var(--backgroundBlack);
-  /* font-family: 'Dhurjati', sans-serif; */
+  font-family: 'Dhurjati', sans-serif;
   color: white;
 }
 :root{

@@ -129,7 +129,7 @@ body{
     }
     p{
       font-family: var(--special);
-      font-size: 10px;
+      font-size: 5px;
     }
     .musicItems{
       width: 100%;

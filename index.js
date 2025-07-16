@@ -1,5 +1,6 @@
-import saveToken from './utils/save-token.js';
+import saveToken from './utils/save-token.js'
 import 'dotenv/config'
+
 
 
 const PORT = process.env.PORT ?? 8000
@@ -10,12 +11,12 @@ import { randomBytes } from 'crypto';
 import cors from 'cors';
 import { stringify } from 'querystring';
 import cookieParser from 'cookie-parser';
-import { env } from 'process';
-import { log } from 'console';
 
-var client_id = process.env.client_id; 
-var client_secret = process.env.client_secret; 
+var client_id = process.env.client_id;
+var client_secret = process.env.client_secret;
+
 var redirect_uri = 'https://playliststats.onrender.com/callback' ;
+
 // var redirect_uri = 'http://localhost:8000/callback' ;
 
 
@@ -30,17 +31,17 @@ var stateKey = 'spotify_auth_state';
 
 var app = express();
 
-app.use(express.static('public'))
 
-app.use(express.static('/public'))
+app.use(express.static('./public'))
   .use(cors())
   .use(cookieParser());
 
 app.get('/login', function(req, res) {
-
+  
   var state = generateRandomString(16);
   res.cookie(stateKey, state);
   // your application requests authorization
+  
   var scope = 'user-read-private playlist-read-private user-top-read user-library-read playlist-modify-private ';
   res.redirect('https://accounts.spotify.com/authorize?' +
     stringify({
@@ -53,7 +54,7 @@ app.get('/login', function(req, res) {
 });
 
 app.get('/callback', function(req, res) {
-
+  
   // your application requests refresh and access tokens
   // after checking the state parameter
 
@@ -147,6 +148,7 @@ app.get('/refresh_token', function(req, res) {
 });
 
 app.get('/test', (req,res) => {
+  
   res.send({success:true, message:'Aproval Test'})
 
 
@@ -156,3 +158,4 @@ app.listen(PORT, (req,res) => {
   console.log(`App listening in \n http://localhost:${PORT}`);
 });
 
+export default app;
